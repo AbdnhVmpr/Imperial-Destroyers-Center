@@ -1,0 +1,50 @@
+@use "../../scss/" as *;
+
+.section {
+  @include flex(center, space-between);
+  padding: 2rem;
+
+  @include mobile {
+    display: block;
+    padding: 40px;
+  }
+
+  &__image-container {
+    margin: 0 30px;
+    width: 20%;
+
+    @include tablet {
+      width: 40%;
+    }
+
+    @include mobile {
+      width: 80%;
+      margin: auto;
+      text-align: center;
+    }
+
+    img {
+      border-radius: $border-radius;
+    }
+  }
+  &__info-container {
+    width: 70%;
+
+    @include mobile {
+      width: 100%;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    .description {
+      margin: 20px 0;
+      @include mobile {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

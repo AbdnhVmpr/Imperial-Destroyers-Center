@@ -1,0 +1,59 @@
+@use "../../scss/" as *;
+
+.card {
+  padding: 26px;
+  border-radius: 20px;
+  border: 2px solid white;
+  background: radial-gradient(circle, red 0%, #0f0f0f 100%);
+
+  box-shadow: -2px 6px 17px -10px rgba(255, 255, 255, 1);
+  transition: 0.3s;
+
+  margin: 40px;
+
+  a:hover {
+    color: white;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__image-container {
+    text-align: center;
+
+    img {
+      border-radius: 20px;
+
+      @include tablet {
+        width: 85%;
+      }
+
+      @include mobile {
+        width: 90%;
+      }
+    }
+  }
+
+  &__info-container {
+    text-transform: capitalize;
+    h3 {
+      font-size: 2rem;
+
+      @include mobile {
+        font-size: 3rem;
+      }
+    }
+    p {
+      font-size: 1rem;
+
+      span {
+        font-weight: bold;
+      }
+
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+  }
+}

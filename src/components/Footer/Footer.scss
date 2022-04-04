@@ -1,0 +1,87 @@
+@use "../../scss/" as *;
+
+.footer {
+  position: relative;
+  padding: 2rem 2rem;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  @include tablet {
+    font-size: 1.2rem;
+  }
+
+  &__content {
+    @include flex(flex-start, space-between);
+
+    @include tablet {
+      display: block;
+    }
+
+    &__company {
+      @include flex(flex-start, unset);
+      flex-direction: column;
+
+      width: 73%;
+
+      @include tablet {
+        @include flex(center, center);
+        width: 100%;
+      }
+
+      .logo-container {
+        width: 116px;
+        margin-right: 10px;
+      }
+
+      .company-info {
+        @include tablet {
+          text-align: center;
+        }
+        .icons {
+          &__list {
+            @include flex(flex-start, flex-start);
+            margin-top: 10px;
+
+            @include tablet {
+              @include flex(flex-start, center);
+            }
+
+            & > li {
+              margin: 10px;
+              font-size: 23px;
+              color: $main-color;
+              transition: 0.3s;
+              cursor: pointer;
+              text-align: center;
+              &:hover {
+                color: #ff00008f;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__container {
+      @include flex(flex-end, space-around);
+      flex: 2;
+      &__menu {
+        a {
+          @include flex(center, flex-end);
+          @include tablet {
+            @include flex(center, flex-start);
+          }
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
