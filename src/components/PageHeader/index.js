@@ -15,7 +15,9 @@ const PageHeader = ({ category }) => {
     <div
       className="page-header"
       style={{ backgroundImage: `url(${background})` }}
-    ></div>
+    >
+      <p style={{ opacity: 0 }}>{category}</p>
+    </div>
   );
 };
 
